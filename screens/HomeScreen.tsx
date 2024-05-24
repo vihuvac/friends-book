@@ -1,11 +1,26 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-export const HomeScreen = () => {
+type RootStackParamList = {
+  Home: undefined;
+  Profile: {name?: string};
+};
+
+type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+export const HomeScreen = ({navigation}: HomeScreenProps) => {
+  // It is possible to pass props to the other component through an object as a second parameter, e.g:
+  // navigation.navigate('Profile', {name: 'Jane'});
+  // In the ProfileScreen component, the name prop can be accessed as follows:
+  // const {name} = route.params;
+  const handlePress = () => navigation.navigate('Profile', {name: 'Jane'});
+
   return (
     <View style={styles.viewStyle}>
-      <Text style={styles.headingStyle}>React Navigation</Text>
+      <Text style={styles.headingStyle}>Native Stack Navigator</Text>
       <Text style={styles.textStyle}>This is the Home Screen</Text>
+      <Button title="Profile" onPress={handlePress} />
     </View>
   );
 };
