@@ -7,11 +7,13 @@ import {store} from './src/redux/store';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {ProfileScreen} from './src/screens/ProfileScreen';
 import {UserScreen} from './src/screens/UserScreen';
+import {FriendsScreen} from './src/screens/FriendsScreen';
 
 type RootStackParamList = {
   Home: undefined;
   Profile: {name?: string};
   User: undefined;
+  Friends: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -34,6 +36,7 @@ const AppContent = (): React.JSX.Element => {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="User" component={UserScreen} />
+        <Stack.Screen name="Friends" component={FriendsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
