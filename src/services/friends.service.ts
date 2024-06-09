@@ -52,6 +52,10 @@ export const fetchFriends = async ({
     const data = await response.json();
     return data;
   } catch (friendsError) {
+    console.error(
+      'Something went wrong trying to fetch the friends list.',
+      friendsError,
+    );
     throw friendsError;
   }
 };
