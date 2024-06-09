@@ -69,13 +69,13 @@ export type Friend = {
 
 type FriendState = {
   friends: Friend[];
-  error: string | null;
+  errorMessage: string | null;
   loading: boolean;
 };
 
 const initialState: FriendState = {
   friends: [],
-  error: null,
+  errorMessage: null,
   loading: false,
 };
 
@@ -94,12 +94,12 @@ const friendSlice = createSlice({
     ) => ({
       ...state,
       loading: false,
-      friends: action.payload.friends,
+      friends: [...state.friends, ...action.payload.friends],
     }),
     friendsRequestError: (state, action: PayloadAction<string>) => ({
       ...state,
       loading: false,
-      error: action.payload,
+      errorMessage: action.payload,
     }),
   },
 });
