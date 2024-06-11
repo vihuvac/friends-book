@@ -5,6 +5,7 @@ import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 type RootStackParamList = {
   Home: undefined;
   Profile: {name?: string};
+  Stuff: undefined;
 };
 
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -14,13 +15,16 @@ export const HomeScreen = ({navigation}: HomeScreenProps) => {
   // navigation.navigate('Profile', {name: 'Jane'});
   // In the ProfileScreen component, the name prop can be accessed as follows:
   // const {name} = route.params;
-  const handlePress = () => navigation.navigate('Profile', {name: 'Jane'});
+  const handleProfilePress = () =>
+    navigation.navigate('Profile', {name: 'Jane'});
+  const handleStuffPress = () => navigation.navigate('Stuff');
 
   return (
     <View style={styles.viewStyle}>
       <Text style={styles.headingStyle}>Native Stack Navigator</Text>
       <Text style={styles.textStyle}>This is the Home Screen</Text>
-      <Button title="Profile" onPress={handlePress} />
+      <Button title="Profile" onPress={handleProfilePress} />
+      <Button title="Stuff" onPress={handleStuffPress} />
     </View>
   );
 };
