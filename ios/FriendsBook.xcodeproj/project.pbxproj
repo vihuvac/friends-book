@@ -15,6 +15,10 @@
 		4B3ECAAD0D832936D58BAE5C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F772797F889549D93080EF59 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-FriendsBook-FriendsBookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FriendsBook-FriendsBookTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D39ADFA62C17F08D009E5904 /* CoolWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39ADFA52C17F08D009E5904 /* CoolWebViewManager.swift */; };
+		D39ADFA82C17F417009E5904 /* CoolWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D39ADFA72C17F417009E5904 /* CoolWebViewManager.m */; };
+		D39ADFAA2C18023A009E5904 /* CoolWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39ADFA92C18023A009E5904 /* CoolWebView.swift */; };
+		D39ADFAC2C180AEA009E5904 /* SubWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39ADFAB2C180AEA009E5904 /* SubWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +49,13 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-FriendsBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FriendsBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FriendsBook/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-FriendsBook-FriendsBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendsBook-FriendsBookTests.release.xcconfig"; path = "Target Support Files/Pods-FriendsBook-FriendsBookTests/Pods-FriendsBook-FriendsBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		D39ADFA42C17F08C009E5904 /* FriendsBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FriendsBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		D39ADFA52C17F08D009E5904 /* CoolWebViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolWebViewManager.swift; sourceTree = "<group>"; };
+		D39ADFA72C17F417009E5904 /* CoolWebViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolWebViewManager.m; sourceTree = "<group>"; };
+		D39ADFA92C18023A009E5904 /* CoolWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolWebView.swift; sourceTree = "<group>"; };
+		D39ADFAB2C180AEA009E5904 /* SubWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubWebView.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F772797F889549D93080EF59 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = FriendsBook/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F772797F889549D93080EF59 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = FriendsBook/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +98,10 @@
 		13B07FAE1A68108700A75B9A /* FriendsBook */ = {
 			isa = PBXGroup;
 			children = (
+				D39ADFA52C17F08D009E5904 /* CoolWebViewManager.swift */,
+				D39ADFA92C18023A009E5904 /* CoolWebView.swift */,
+				D39ADFAB2C180AEA009E5904 /* SubWebView.swift */,
+				D39ADFA72C17F417009E5904 /* CoolWebViewManager.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -97,6 +110,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				F772797F889549D93080EF59 /* PrivacyInfo.xcprivacy */,
+				D39ADFA42C17F08C009E5904 /* FriendsBook-Bridging-Header.h */,
 			);
 			name = FriendsBook;
 			sourceTree = "<group>";
@@ -211,7 +225,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -398,8 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39ADFAA2C18023A009E5904 /* CoolWebView.swift in Sources */,
+				D39ADFA82C17F417009E5904 /* CoolWebViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				D39ADFAC2C180AEA009E5904 /* SubWebView.swift in Sources */,
+				D39ADFA62C17F08D009E5904 /* CoolWebViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-FriendsBook-FriendsBookTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -445,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-FriendsBook-FriendsBookTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = FriendsBookTests/Info.plist;
@@ -486,6 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FriendsBook;
+				SWIFT_OBJC_BRIDGING_HEADER = "FriendsBook-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,6 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = FriendsBook;
+				SWIFT_OBJC_BRIDGING_HEADER = "FriendsBook-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -590,10 +612,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -665,10 +684,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
